@@ -6,7 +6,7 @@ package premierprojetsurgithub;
 
 /**
  *
- * @author iriravapaie
+ * @author steven brossel--sacault
  */
 public class PremierProjetSurGithub {
 
