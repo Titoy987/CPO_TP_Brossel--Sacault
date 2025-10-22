@@ -1,0 +1,43 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package tp1_convertisseur_brossel;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author steven
+ */
+
+public class TP1_convertisseur_BROSSEL {
+    
+    public static double CelciusVersKelvin (double tCelcius) {
+        return tCelcius +273.15;
+    }
+    public static double KelvinVersCelcius(double tKelvin){
+        return tKelvin - 273.15;
+    }
+    public static double FarenheitVersCelcius(double tFarenheit){
+        return (tFarenheit - 32) * 5/9;
+    }
+    public static double CelciusVersFarenheit(double tCelcius) {
+        return (tCelcius * 9 / 5) + 32;
+    }
+     /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner Sc = new Scanner(System.in);
+        double var1 = Sc.nextDouble();
+        System.out.println("la température en degret celcius est "+var1);
+        double temp_kel = var1+273.15;
+        System.out.println("température en kelvin "+temp_kel);
+        
+        double temp_kel2= CelciusVersKelvin(var1);
+        System.out.println("utilisation class "+temp_kel2);
+    }
+    
+}
