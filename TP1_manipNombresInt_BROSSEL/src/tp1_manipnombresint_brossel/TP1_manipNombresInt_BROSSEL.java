@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author steven
+ * @author steven brossel--sacault
  */
 public class TP1_manipNombresInt_BROSSEL {
 
