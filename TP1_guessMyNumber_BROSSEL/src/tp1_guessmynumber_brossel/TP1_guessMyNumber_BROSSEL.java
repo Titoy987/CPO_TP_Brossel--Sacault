@@ -5,6 +5,7 @@
 package tp1_guessmynumber_brossel;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -20,7 +21,20 @@ public class TP1_guessMyNumber_BROSSEL {
         Random generateurAleat = new Random();
         
         int n = generateurAleat.nextInt(100);
-        System.out.println(n);
+        int joueur = 0;
+        Scanner Sc = new Scanner(System.in);
+        while (joueur !=n){
+            joueur = Sc.nextInt();
+            if(joueur<n){
+                System.out.println("plus grand");
+            }
+            else if(joueur>n){
+                System.out.println("plus petit");
+            }
+            else{
+                System.out.println("gagné");
+            }
+        }
     }
     
 }
