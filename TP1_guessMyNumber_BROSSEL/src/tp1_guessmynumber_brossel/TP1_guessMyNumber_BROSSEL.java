@@ -18,13 +18,45 @@ public class TP1_guessMyNumber_BROSSEL {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner Sc = new Scanner(System.in);
         Random generateurAleat = new Random();
         
-        int n = generateurAleat.nextInt(100);
+        int n = 0;
+        int niveau = 0;
+        int i = 0;
         int joueur = 0;
-        Scanner Sc = new Scanner(System.in);
+        int bonus = 0;
+        
+        
+        
+        System.out.println("Choisir la difficulté");
+        System.out.println("1) facile");
+        System.out.println("2) moyen");
+        System.out.println("3) difficile");
+        niveau =Sc.nextInt();
+        if(niveau == 1){
+            n = generateurAleat.nextInt(20);
+        }
+        else if(niveau == 2){
+            n = generateurAleat.nextInt(100);
+        }
+        else if(niveau == 3){
+            n = generateurAleat.nextInt(200);
+        }
+        else{
+            System.out.println("erreur");
+        }
+        
+        
+        
+        
+        
+        
         while (joueur !=n){
+            bonus = generateurAleat.nextInt(3);
+            System.out.println("saisir un nombre :");
             joueur = Sc.nextInt();
+            i+=1;
             if(joueur<n){
                 System.out.println("plus grand");
             }
@@ -34,7 +66,9 @@ public class TP1_guessMyNumber_BROSSEL {
             else{
                 System.out.println("gagné");
             }
+            
         }
+        System.out.println(i + " tentatives");
     }
     
 }
