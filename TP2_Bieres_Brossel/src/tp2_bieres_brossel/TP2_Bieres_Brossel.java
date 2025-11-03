@@ -15,6 +15,7 @@ public class TP2_Bieres_Brossel {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
     }
     
 }
