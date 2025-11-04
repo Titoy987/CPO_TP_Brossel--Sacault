@@ -15,7 +15,9 @@ public class TP2_convertisseurObjet_BROSSEL {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {        
+    public static void main(String[] args) {   
+        Convertisseur conv1=new Convertisseur();
+        
         Scanner Sc = new Scanner(System.in);
         System.out.println("Bonjour, saisissez une valeur : ");
         double temp = Sc.nextDouble();
