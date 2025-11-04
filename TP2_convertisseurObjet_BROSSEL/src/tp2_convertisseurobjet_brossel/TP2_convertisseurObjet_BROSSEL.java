@@ -67,6 +67,7 @@ public class TP2_convertisseurObjet_BROSSEL {
             System.out.println("erreur");
         }
         System.out.println(temp + " degré " + avant + " est égal à " + resultat + " degré " + apres);
+        System.out.println(conv1);
     }
     
 }
