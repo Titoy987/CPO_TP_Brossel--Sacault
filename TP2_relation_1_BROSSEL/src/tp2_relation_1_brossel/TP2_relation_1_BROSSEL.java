@@ -22,25 +22,14 @@ public class TP2_relation_1_BROSSEL {
         Personne bob = new Personne("Bobby", "Sixkiller");
         Personne reno = new Personne("Reno", "Raines");
         
-        System.out.println("liste des voitures disponibles "+ uneClio +"\n" + uneAutreClio + "\n" + une2008 + "\n" + uneMicra ) ;
+        //System.out.println("liste des voitures disponibles "+ uneClio +"\n" + uneAutreClio + "\n" + une2008 + "\n" + uneMicra ) ;
         
-        bob.liste_voitures[bob.nbVoitures] = uneClio ;
-        uneClio.Proprietaire = bob;
-        bob.nbVoitures++;
+        bob.ajouter_voiture(uneClio);
+        bob.ajouter_voiture(uneMicra);
         
-        bob.liste_voitures[bob.nbVoitures] = uneAutreClio ;
-        uneAutreClio.Proprietaire = bob;
-        bob.nbVoitures++;
         
-        reno.liste_voitures[reno.nbVoitures]=une2008;
-        une2008.Proprietaire =reno;
-        reno.nbVoitures++;
-        
-        reno.liste_voitures[reno.nbVoitures]=uneMicra;
-        uneMicra.Proprietaire =reno;
-        reno.nbVoitures++;
-        
-        System.out.println("la premiere voiture de Bob est " +bob.liste_voitures[0] ) ;
+        //System.out.println("la premiere voiture de Bob est " +bob.liste_voitures[0]);
+        System.out.println(bob);
     }
     
 }
