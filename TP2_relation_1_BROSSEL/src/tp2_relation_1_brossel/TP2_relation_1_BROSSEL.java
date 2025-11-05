@@ -26,10 +26,13 @@ public class TP2_relation_1_BROSSEL {
         
         bob.ajouter_voiture(uneClio);
         bob.ajouter_voiture(uneMicra);
+        reno.ajouter_voiture(une2008);
+        reno.ajouter_voiture(uneAutreClio);
         
         
         //System.out.println("la premiere voiture de Bob est " +bob.liste_voitures[0]);
         System.out.println(bob);
+        System.out.println(reno);
     }
     
 }
