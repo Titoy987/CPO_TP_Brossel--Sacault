@@ -7,15 +7,26 @@
  *
  * @author steven
  */
+import javax.swing.*;
 public class cadena extends javax.swing.JFrame {
-    
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(cadena.class.getName());
+    
+    private programme programme;
 
     /**
      * Creates new form cadena
      */
     public cadena() {
         initComponents();
+        programme = new Programme();
+        mettreAJourAffichage();
+    }
+    
+    private void mettreAJourAffichage() {
+        texte_chiffre_0.setText(String.valueOf(programme.getChiffre(0)));
+        texte_chiffre_1.setText(String.valueOf(programme.getChiffre(1)));
+        texte_chiffre_2.setText(String.valueOf(programme.getChiffre(2)));
+        texte_chiffre_3.setText(String.valueOf(programme.getChiffre(3)));
     }
 
     /**
@@ -176,34 +187,50 @@ public class cadena extends javax.swing.JFrame {
 
     private void up_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_1ActionPerformed
         // TODO add your handling code here:
+        programme.incrementer(0);
+        mettreAJourAffichage();
     }//GEN-LAST:event_up_chiffre_1ActionPerformed
 
     private void up_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_2ActionPerformed
         // TODO add your handling code here:
+        programme.incrementer(1);
+        mettreAJourAffichage();
     }//GEN-LAST:event_up_chiffre_2ActionPerformed
 
     private void up_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_3ActionPerformed
         // TODO add your handling code here:
+        programme.incrementer(2);
+        mettreAJourAffichage();
     }//GEN-LAST:event_up_chiffre_3ActionPerformed
 
     private void up_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_4ActionPerformed
         // TODO add your handling code here:
+        programme.incrementer(3);
+        mettreAJourAffichage();
     }//GEN-LAST:event_up_chiffre_4ActionPerformed
 
     private void down_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_1ActionPerformed
         // TODO add your handling code here:
+        programme.decrementer(0);
+        mettreAJourAffichage();
     }//GEN-LAST:event_down_chiffre_1ActionPerformed
 
     private void down_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_2ActionPerformed
         // TODO add your handling code here:
+        programme.decrementer(1);
+        mettreAJourAffichage();
     }//GEN-LAST:event_down_chiffre_2ActionPerformed
 
     private void down_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_3ActionPerformed
         // TODO add your handling code here:
+        programme.decrementer(2);
+        mettreAJourAffichage();
     }//GEN-LAST:event_down_chiffre_3ActionPerformed
 
     private void down_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_4ActionPerformed
         // TODO add your handling code here:
+        programme.decrementer(3);
+        mettreAJourAffichage();
     }//GEN-LAST:event_down_chiffre_4ActionPerformed
 
     /**
