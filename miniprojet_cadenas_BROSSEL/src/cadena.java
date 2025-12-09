@@ -12,13 +12,14 @@ public class cadena extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(cadena.class.getName());
     
     private programme programme;
+    
 
     /**
      * Creates new form cadena
      */
     public cadena() {
         initComponents();
-        programme = new Programme();
+        programme = new programme();
         mettreAJourAffichage();
     }
     
@@ -27,6 +28,7 @@ public class cadena extends javax.swing.JFrame {
         texte_chiffre_1.setText(String.valueOf(programme.getChiffre(1)));
         texte_chiffre_2.setText(String.valueOf(programme.getChiffre(2)));
         texte_chiffre_3.setText(String.valueOf(programme.getChiffre(3)));
+        
     }
 
     /**
@@ -153,6 +155,11 @@ public class cadena extends javax.swing.JFrame {
                         getContentPane().add(texte_intro, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 18, -1, -1));
 
                         bouton_tester.setText("Tester");
+                        bouton_tester.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                bouton_testerActionPerformed(evt);
+                            }
+                        });
                         getContentPane().add(bouton_tester, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 131, -1, -1));
 
                         texte_lbl_nb_chiffres_exacts.setText("Nombre de chiffres exacts :");
@@ -180,6 +187,11 @@ public class cadena extends javax.swing.JFrame {
                         getContentPane().add(texte_tentatives, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 219, -1, -1));
 
                         bouton_recommencer.setText("recommencer");
+                        bouton_recommencer.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                bouton_recommencerActionPerformed(evt);
+                            }
+                        });
                         getContentPane().add(bouton_recommencer, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 271, -1, -1));
 
                         pack();
@@ -232,6 +244,40 @@ public class cadena extends javax.swing.JFrame {
         programme.decrementer(3);
         mettreAJourAffichage();
     }//GEN-LAST:event_down_chiffre_4ActionPerformed
+
+    private void bouton_testerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_testerActionPerformed
+        // TODO add your handling code here:
+        int[] resultat = programme.tester();
+        int victoire = resultat[3];
+        int tentative = programme.tentative();
+        
+        programme.tester();
+        texte_nb_chiffres_exacts.setText(resultat[0]+"");
+        texte_nb_chiffres_haut.setText(resultat[1]+"");
+        texte_nb_chiffres_bas.setText(resultat[2]+"");
+        
+        if (victoire!=0){
+            texte_score.setText("Vous avez gagné");
+            return;
+        }    
+        if (tentative==100){
+            texte_score.setText("Vous avez perdu");
+            return;
+        }
+        texte_score.setText(tentative +" sur 5");
+         
+        
+    }//GEN-LAST:event_bouton_testerActionPerformed
+
+    private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
+        // TODO add your handling code here:
+        programme.reset();
+        mettreAJourAffichage();
+        texte_nb_chiffres_exacts.setText("0");
+        texte_nb_chiffres_haut.setText("0");
+        texte_nb_chiffres_bas.setText("0");
+        texte_score.setText("0 sur 5");
+    }//GEN-LAST:event_bouton_recommencerActionPerformed
 
     /**
      * @param args the command line arguments
