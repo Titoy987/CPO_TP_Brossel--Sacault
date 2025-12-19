@@ -15,6 +15,8 @@ public class LightOff_BROSSEL_version_console {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+    Partie p = new Partie();
+    p.initialiserPartie();
+    p.lancerPartie();
     }
-    
 }
